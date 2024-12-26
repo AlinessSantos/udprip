@@ -17,10 +17,9 @@ class Router:
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         self.socket.bind((self.address, PORT))
         self.running = True
-
         if startup_file:
             self.process_startup_file(startup_file)
-
+        print("Is running!")
         # Inicia a thread de envio de atualizações
         threading.Thread(target=self.send_updates, daemon=True).start()
         # Inicia a thread de recepção de mensagens
