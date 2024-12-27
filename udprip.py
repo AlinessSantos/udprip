@@ -3,7 +3,7 @@ import json
 import socket
 import threading
 import time
-
+#Aline
 # Configurações globais
 PORT = 55151
 BUFFER_SIZE = 1024
